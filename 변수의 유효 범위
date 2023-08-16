@@ -1,0 +1,30 @@
+global scope(전역변수) / local scope(지역변수)
+-> global scope를 사용해야 하는 상황이 생기면 코드 설계가 잘못되어있을 확률이 크다.
+
+# 쇼핑몰 할인율 -> 구매가격
+# 할인가가 적용된 상품 가격 얻는 함수
+
+def purchase_price(price, sale_per):
+    new_price = price * (100 - sale_per) / 100
+    new_price = int(new_price)
+    return new_price
+
+
+# 함수 실행
+p1 = purchase_price(20000, 50)
+p2 = purchase_price(40000, 50)
+print(p1, p2) # None None -> 10000 32000
+print(p1 + p2)
+
+
+# global scope variable <> local scope variables
+def add(a, b):
+    global c -> 추천하지 않음
+    c = 5
+    print(a, c)
+    return a + b
+
+a = 1
+b = 2
+c = 3
+add(4,5)
