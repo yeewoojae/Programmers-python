@@ -1,0 +1,29 @@
+for_in_list
+
+basket = ['apple', 'banana', 'orange', 'melon']
+
+# for 변수명 in 리스트:
+for item in ['apple', 'banana', 'orange', 'melon']:
+    print(f'{item}을 먹었습니다.')
+    
+print(item)
+
+---------------------------------------------------------------------------------------
+
+print(list(range(10)))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(list(range(3, 10)))
+[3, 4, 5, 6, 7, 8, 9]
+
+print(list(range(3, 10, 2)))
+[3, 5, 7, 9]
+
+for x in range(100):
+    print(f'테스트 함수+기능 {x}')
+
+for x in range(1, 10):
+    print(f'3 * {x} = {3 * x}')
+
+for _ in range(3):
+print(f'안녕하세요')
