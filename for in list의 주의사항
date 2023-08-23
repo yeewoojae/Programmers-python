@@ -1,0 +1,32 @@
+# for문 도중 member의 remove 개선
+member = ['Spencer', 'Adela', 'Allen', 'Chen', 'John', 'Albert', 'Andy', 'Darby']
+for user in member.copy():
+    if user[0] in ['A', 'a']:
+        member.remove(user)
+print(member)
+# 기대 : ['Spencer', 'Chen', 'John', 'Darby']
+# 실제 : [['Spencer', 'Allen', 'Chen', 'John', 'Albert', 'Andy', 'Darby']
+
+# for문 도중 member의 append 개선
+member = ['Spencer', 'Adela', 'Allen', 'Chen', 'John', 'Albert', 'Andy', 'Darby']
+for user in member.copy():
+    if user[0] in ['A', 'a']:
+        member.append(user)
+print(member)
+# 기대 : ['Spencer', 'Adela', 'Adela', 'Allen', 'Allen', 'Chen', 'John', 'Albert', 'Albert', 'Andy', 'Andy', 'Darby', 'Darby']
+# 실제 : 끝나지않음
+
+-> copy으로 확인을 한 후 원본데이터의 내용에만 삭제하거나 추가
+
+# for문 도중 member의 update 개선 -> enumerate
+member = ['Spencer', 'Adela', 'Allen', 'Chen', 'John', 'Albert', 'Andy', 'Darby']
+index = 0
+for user in member.copy():
+    if user[0] in ['A', 'a']:
+        member[index] = 0
+      index += 1
+print(member)
+# ['Spencer', 0, 0, 'Chen', 'John', 0, 0, 'Darby']
+
+-> for문내의 index를 자동으로 옮겨주는 장점을 제대로 살리지 못하는 코드이며 좋지 않은 코드
+enumerate 함수를 통해 나중에 for문에서 index를 사용하는 방법 학습
