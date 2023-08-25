@@ -85,6 +85,49 @@ print(garden['trees'][0])
 
 ---------------------------------------------------------------------------------------------------------
 
+# dict func
+# .keys()
+user1 = {'name': 'Spencer', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Python'}
+print(list(user1.keys()))
+
+# .values()
+user1 = {'name': 'Spencer', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Python'}
+print(user1.values())
+
+# .items()
+user1 = {'name': 'Spencer', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Python'}
+print(user1.items())
+
+------------------------------------------------------------------------------------------------------------
+
+basket = {
+    'apple': 3,
+    'banana': 4,
+    'pineapple': 5,
+    'orange': 6
+}
+
+for item in basket:
+    print(item)
+    print(f'{item}는 {basket[item]}개 있습니다.')
+
+for key, value in basket.items():
+    print(key, value)
+    print(f'{key}는 {value}개 있습니다.')
 
 
+
+member = [
+    {'name': 'Spencer', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Python'},
+    {'name': 'Mussg', 'colleage': '프로그래머스', 'year': 20, 'lang': 'C++'},
+    {'name': 'John', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Java'},
+    {'name': 'Allen', 'colleage': '프로그래머스', 'year': 20, 'lang': 'Scratch'},
+    {'name': 'Chen', 'colleage': '프로그래머스', 'year': 20, 'lang': 'HTML'}
+]
+
+for user in member: 
+    if user['lang'] == 'Java':
+        print(user)
+
+-> 먼저 자료형을 정확하게 확인한 후, 자료를 적절하게 변환하여 정보를 추출해내야함
 
